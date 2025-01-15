@@ -2,21 +2,25 @@
 
 ## 1. Subdomain Enumeration Script
 
-import requests 
-import sys 
+'''bash 
 
-sub_list = open("subdomains.txt").read() 
-subdoms = sub_list.splitlines()
+  import requests 
+  import sys 
 
-for sub in subdoms:
-    sub_domains = f"http://{sub}.{sys.argv[1]}" 
+  sub_list = open("subdomains.txt").read() 
+  subdoms = sub_list.splitlines()
 
-    try:
-        requests.get(sub_domains)
+  for sub in subdoms:
+      sub_domains = f"http://{sub}.{sys.argv[1]}" 
+
+     try:
+         requests.get(sub_domains)
     
-    except requests.ConnectionError: 
+     except requests.ConnectionError: 
         pass
     
-    else:
-        print("Valid domain: ",sub_domains) 
+     else:
+         print("Valid domain: ",sub_domains) 
+
+''' bash
 
