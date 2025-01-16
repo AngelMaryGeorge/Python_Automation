@@ -2,7 +2,7 @@
 
 ## 1. Subdomain Enumeration Script
 
-' python
+```
 
   import requests 
   import sys 
@@ -22,5 +22,5 @@
      else:
          print("Valid domain: ",sub_domains) 
 
-' python
+```
 
